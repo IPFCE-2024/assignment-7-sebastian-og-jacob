@@ -1,16 +1,22 @@
 #include "stack.h"
+#include <stdlib.h> /*malloc*/
+
 
 void initialize(stack *s) {
-  // implement initialize here
+  s->head = NULL;
 }
 
 void push(int x, stack *s) {
-  // implement push here
+  node *n = malloc(sizeof(node));
+  n->data = x;
+  n->next = s->head;
+  s->head = n;
 }
 
 int pop(stack *s) {
-  // implement pop here
-  return -1;
+  node* n = s->head;
+  s->head = n->next;
+  return n->data;
 }
 
 bool empty(stack *s) {
