@@ -1,6 +1,7 @@
 #include "taylor_sine.h"
 #include <assert.h>
 #include <stdio.h>
+#include <math.h>
 #define PI 3.14159265358979
 
 double taylor_sine(double x, int n) {
@@ -22,7 +23,9 @@ double taylor_sine(double x, int n) {
 
 /*
 int main(){
-  printf("%lf", taylor_sine(PI/4, 11));
+  int numb;
+  scanf("%lf",&num);
+  printf("%lf and %lf", taylor_sine(numb, 11), sin(numb));
   return 0;
 }
 */
