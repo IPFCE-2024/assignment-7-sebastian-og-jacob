@@ -23,7 +23,7 @@ double taylor_sine(double x, int n) {
 
 /*
 int main(){
-  int numb;
+  int num;
   scanf("%lf",&num);
   printf("%lf and %lf", taylor_sine(numb, 11), sin(numb));
   return 0;

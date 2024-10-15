@@ -1,5 +1,6 @@
 #include "stack.h"
 #include <stdlib.h> /*malloc*/
+#include <stdbool.h>
 
 
 void initialize(stack *s) {
@@ -20,11 +21,13 @@ int pop(stack *s) {
 }
 
 bool empty(stack *s) {
-  // implement empty here
-  return false;
+  return s->head == NULL;
 }
 
 bool full(stack *s) {
-  // implement full here
-  return false;
+  // implement full here. Dette gælder i teorien ikke for netop stacken, 
+  // men for hele programmet. For da er alt memory brugt op. Det må være løsningen da vi bruger en dynamisk liste.
+  node *temp = malloc(sizeof(node));
+  return temp==NULL;
+
 }
