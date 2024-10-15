@@ -28,6 +28,8 @@ bool full(stack *s) {
   // implement full here. Dette gælder i teorien ikke for netop stacken, 
   // men for hele programmet. For da er alt memory brugt op. Det må være løsningen da vi bruger en dynamisk liste.
   node *temp = malloc(sizeof(node));
-  return temp==NULL;
+  bool return_val = temp == NULL;
+  free(temp);
+  return return_val;
 
 }
