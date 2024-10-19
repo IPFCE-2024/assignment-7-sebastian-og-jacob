@@ -63,7 +63,7 @@ bool test_stack() {
 
 int main(){
     if (test_stack){
-        printf("Test succesed\n");
+        printf("Test succeded\n");
     }
     else {
         printf("Test did not succed\n");

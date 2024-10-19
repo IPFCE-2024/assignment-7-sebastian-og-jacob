@@ -15,5 +15,7 @@ int main(void){
 }
 
 // For degree > 8 har vi en præcision på 6 decimaler
-// For degree > 4 flipper fortegnet ikke for hver anden degree 
-// For degree = 1 Finder vi num fordi taylorfunktionen netop tager input x. 
+// For 8 > degree > 5 får vores version upræcise svar
+// For 5 > degree > 1 får vi forkerte svar med fortegnsfejl
+// For degree = 1 Finder vi num fordi taylorfunktionen netop tager input x.
+// For degree < 1 Assertion fejl

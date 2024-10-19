@@ -4,23 +4,31 @@
 
 
 void initialize(stack *s) {
+  // Sætter stack til at være tom
   s->head = NULL;
 }
 
 void push(int x, stack *s) {
+  // Laver ny node der har x som data
   node *n = malloc(sizeof(node));
   n->data = x;
+  // Nye element peger på gamle head
   n->next = s->head;
+  // Nye node bliver sat som head
   s->head = n;
 }
 
 int pop(stack *s) {
+  // Flytter node som skal poppes over i ny node
   node* n = s->head;
+  // head for stacken bliver sat til forrige element
   s->head = n->next;
+  // Returnerer dataen fra den poppede node
   return n->data;
 }
 
 bool empty(stack *s) {
+  // Returnerer sand hvis head er NULL
   return s->head == NULL;
 }
 
